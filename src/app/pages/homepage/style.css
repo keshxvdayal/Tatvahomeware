@@ -1,0 +1,56 @@
+/* Forcefully override Swiper’s default arrow styles */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important; /* Hide default blue arrows */
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Adjust custom arrows */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 24px;
+  height: 24px;
+  color: #444 !important; /* Force color */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* transform: scale(1); */
+}
+
+.swiper-button-prev:hover svg,
+.swiper-button-next:hover svg {
+  color: black !important;
+  /* transform: scale(1.; */
+}
+
+/* Positioning */
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
